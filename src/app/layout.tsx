@@ -1,5 +1,6 @@
 import MainHeader from "@/components/header/MainHeader";
 import MainFooter from "@/components/MainFooter";
+import css from "./layout.module.css";
 
 export const metadata = {
   title: "Tabletop Crusader Character",
@@ -16,8 +17,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>
+    <html lang="en" className={css.html}>
+      <body className={css.body}>
         <MainHeader />
         {children}
         <MainFooter />
