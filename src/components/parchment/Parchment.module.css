@@ -1,6 +1,6 @@
 .parchment {
   /* Kolor tła pergaminu */
-  background-color: var(--light-paper);
+  background-color: var(--light-parchment);
 
   /* Tekstura papieru wykonana gradientem (ziarnistość) */
   background-image:
