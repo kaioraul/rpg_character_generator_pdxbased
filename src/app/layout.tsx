@@ -1,6 +1,7 @@
 import MainHeader from "@/components/header/MainHeader";
-import MainFooter from "@/components/MainFooter";
+import MainFooter from "@/components/footer/MainFooter";
 import css from "./layout.module.css";
+import Parchment from "@/components/parchment/Parchment";
 
 export const metadata = {
   title: "Tabletop Crusader Character",
@@ -19,9 +20,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={css.html}>
       <body className={css.body}>
-        <MainHeader />
-        {children}
-        <MainFooter />
+        <Parchment>
+          <MainHeader />
+          {children}
+          <MainFooter />
+        </Parchment>
       </body>
     </html>
   );
