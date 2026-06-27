@@ -1,0 +1,39 @@
+.frame01 {
+  position: relative;
+  background-color: #1a1a1a;
+  border: 4px solid #2a2a2a; /* Głęboka rama */
+
+  /* Złote "zdobienia" uzyskiwane przez warstwy cienia */
+  box-shadow:
+    inset 0 0 0 2px #d4af37,
+    /* Cienka złota linia wewnątrz */ inset 0 0 0 6px #1a1a1a,
+    /* Czarna przerwa */ inset 0 0 0 8px #8b6e23,
+    /* Grubsza złota rama */ 0 0 20px rgba(0, 0, 0, 0.5); /* Cień zewnętrzny */
+
+  padding: 10px;
+}
+
+/* Pseudo-elementy dla "rożków" – imitacja okuć */
+.frame01::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  width: 45px;
+  height: 45px;
+  border-top: 2px solid #d4af37;
+  border-left: 2px solid #d4af37;
+  border-radius: 30%;
+}
+
+.frame01::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  right: -6px;
+  width: 45px;
+  height: 45px;
+  border-bottom: 2px solid #d4af37;
+  border-right: 2px solid #d4af37;
+  border-radius: 30%;
+}
