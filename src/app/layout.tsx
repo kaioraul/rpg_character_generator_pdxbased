@@ -21,13 +21,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={css.html}>
       <body className={css.body}>
+        <MainHeader />
         <FiligreeCorners01>
-          <Parchment>
-            <MainHeader />
-            {children}
-            <MainFooter />
-          </Parchment>
+          <Parchment>{children}</Parchment>
         </FiligreeCorners01>
+        <MainFooter />
       </body>
     </html>
   );
