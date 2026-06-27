@@ -1,0 +1,50 @@
+.filigreeCorner01Frame {
+  position: relative;
+}
+
+.filigreeCorner01LeftTop {
+  content: "";
+  position: absolute;
+  background-image: url("../ornaments/filigree-corner01.svg");
+  background-size: contain;
+  rotate: 90deg;
+  top: 4px;
+  left: 4px;
+  min-width: 60px;
+  min-height: 60px;
+}
+
+.filigreeCorner01LeftBottom {
+  content: "";
+  position: absolute;
+  background-image: url("../ornaments/filigree-corner01.svg");
+  background-size: contain;
+  bottom: 4px;
+  left: 4px;
+  min-width: 60px;
+  min-height: 60px;
+}
+
+.filigreeCorner01RightTop {
+  content: "";
+  position: absolute;
+  background-image: url("../ornaments/filigree-corner01.svg");
+  background-size: contain;
+  rotate: 180deg;
+  top: 4px;
+  right: 4px;
+  min-width: 60px;
+  min-height: 60px;
+}
+
+.filigreeCorner01RightBottom {
+  content: "";
+  position: absolute;
+  background-image: url("../ornaments/filigree-corner01.svg");
+  background-size: contain;
+  rotate: -90deg;
+  bottom: 4px;
+  right: 4px;
+  min-width: 60px;
+  min-height: 60px;
+}

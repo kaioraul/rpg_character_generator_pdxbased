@@ -2,7 +2,7 @@ import MainHeader from "@/components/header/MainHeader";
 import MainFooter from "@/components/footer/MainFooter";
 import css from "./layout.module.css";
 import Parchment from "@/components/parchment/Parchment";
-import Frame02 from "@/components/frames/Frame02";
+import Frame01 from "@/components/frames/FiligreeCorners01";
 
 export const metadata = {
   title: "Tabletop Crusader Character",
@@ -21,13 +21,13 @@ export default function RootLayout({
   return (
     <html lang="en" className={css.html}>
       <body className={css.body}>
-        <Frame02>
+        <Frame01>
           <Parchment>
             <MainHeader />
             {children}
             <MainFooter />
           </Parchment>
-        </Frame02>
+        </Frame01>
       </body>
     </html>
   );
