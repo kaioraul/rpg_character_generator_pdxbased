@@ -11,7 +11,6 @@
   flex-direction: column;
   flex-grow: 1;
   align-items: center;
-  gap: 32px;
   background: white;
   border: 1px solid white;
   border-radius: 1px;
@@ -21,7 +20,6 @@
   flex-direction: column;
   flex-grow: 2;
   align-items: center;
-  gap: 32px;
   background: white;
   border: 1px solid white;
   border-radius: 1px;
@@ -32,8 +30,39 @@
   flex-direction: column;
   flex-grow: 1;
   align-items: center;
-  gap: 32px;
   background: white;
   border: 1px solid white;
   border-radius: 1px;
+}
+
+.leftContainerTop {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  background: grey;
+  border: 1px solid grey;
+  border-radius: 1px;
+}
+
+.houseCoA {
+  background: white;
+  border: 1px solid red;
+  border-radius: 1px;
+  align-self: flex-start;
+  max-width: 15%;
+}
+
+.portrait {
+  background: white;
+  border: 1px solid brown;
+  border-radius: 100%;
+}
+
+.familyCoA {
+  background: white;
+  border: 1px solid red;
+  border-radius: 1px;
+  align-self: flex-start;
+  max-width: 15%;
 }
