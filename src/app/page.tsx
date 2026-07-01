@@ -18,9 +18,15 @@ export default function Home() {
         <input readOnly type="text" id="name" name="name" value="Name" />
         <input readOnly type="text" id="title" name="title" value="Title" />
         <input readOnly type="text" id="house" name="house" value="House" />
-        <div>Statistics</div>
       </div>
       <div className={css.secondContainer}>
+        <div className={css.skills}>
+          <div className={css.diplomacy}></div>
+          <div className={css.martial}></div>
+          <div className={css.stewardship}></div>
+          <div className={css.intrigue}></div>
+          <div className={css.learning}></div>
+        </div>
         <div>OCEAN model</div>
         <div>Traits</div>
         <button>Save</button>
