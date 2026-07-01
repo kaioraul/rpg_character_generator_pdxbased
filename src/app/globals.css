@@ -68,7 +68,7 @@ body {
 }
 
 .black-marble {
-  background-image: var(--black-marble-image);
+  background-image: var(--black-marble-background-image);
   background-blend-mode: overlay, overlay, multiply, normal;
   filter: contrast(1.1) brightness(0.9);
 }
