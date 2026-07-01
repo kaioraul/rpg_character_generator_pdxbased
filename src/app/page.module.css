@@ -6,63 +6,88 @@
   gap: 6px;
 }
 
-.leftContainer {
+.mainContainer {
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
-  align-items: center;
-  background: white;
-  border: 1px solid white;
-  border-radius: 1px;
-}
-.centerContainer {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 2;
   align-items: center;
   background: white;
   border: 1px solid white;
   border-radius: 1px;
 }
 
-.rightContainer {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  align-items: center;
-  background: white;
-  border: 1px solid white;
-  border-radius: 1px;
-}
-
-.leftContainerTop {
+.mainContainerTop {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
+  height: 40%;
   background: grey;
   border: 1px solid grey;
   border-radius: 1px;
 }
 
-.houseCoA {
-  background: white;
-  border: 1px solid red;
-  border-radius: 1px;
-  align-self: flex-start;
+.portraitLeft {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: green;
   max-width: 15%;
+  min-width: 5%;
 }
 
-.portrait {
+.houseCoA {
+  background: white;
+  aspect-ratio: 1;
+  border: 1px solid red;
+  border-radius: 1px;
+  width: 100%;
+}
+
+.heirPortrait {
+  aspect-ratio: 1;
+  width: 100%;
   background: white;
   border: 1px solid brown;
   border-radius: 100%;
 }
 
+.characterPortrait {
+  align-self: center;
+  aspect-ratio: 1;
+  width: 60%;
+  background: white;
+  border: 1px solid brown;
+  border-radius: 100%;
+}
+
+.portraitRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: green;
+  max-width: 15%;
+  min-width: 5%;
+}
+
 .familyCoA {
+  aspect-ratio: 1;
   background: white;
   border: 1px solid red;
   border-radius: 1px;
-  align-self: flex-start;
-  max-width: 15%;
+  width: 100%;
+}
+
+.spousePortrait {
+  aspect-ratio: 1;
+  width: 100%;
+  background: white;
+  border: 1px solid brown;
+  border-radius: 100%;
+}
+
+.secondContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  border: 1px solid white;
+  border-radius: 1px;
 }
