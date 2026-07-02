@@ -28,7 +28,8 @@ export default function Home() {
             <div className={css.spousePortrait}></div>
           </div>
         </div>
-
+      </div>
+      <div className={css.secondContainer}>
         <div className={css.skills}>
           <div className={css.diplomacy}>
             <Image
@@ -65,8 +66,6 @@ export default function Home() {
             Prowess
           </div>
         </div>
-      </div>
-      <div className={css.secondContainer}>
         <div>OCEAN model</div>
         <div>Traits</div>
         <button>Save</button>
