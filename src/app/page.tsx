@@ -1,4 +1,7 @@
+import Image from "next/image";
+
 import css from "./page.module.css";
+import diplomacyImage from "../images/diplomacy.png";
 
 export default function Home() {
   return (
@@ -18,15 +21,23 @@ export default function Home() {
         <input readOnly type="text" id="name" name="name" value="Name" />
         <input readOnly type="text" id="title" name="title" value="Title" />
         <input readOnly type="text" id="house" name="house" value="House" />
-      </div>
-      <div className={css.secondContainer}>
         <div className={css.skills}>
-          <div className={css.diplomacy}></div>
+          <div className={css.diplomacy}>
+            <Image
+              src={diplomacyImage}
+              alt="Diplomacy"
+              width={25}
+              height={25}
+            />
+            Diplomacy
+          </div>
           <div className={css.martial}></div>
           <div className={css.stewardship}></div>
           <div className={css.intrigue}></div>
           <div className={css.learning}></div>
         </div>
+      </div>
+      <div className={css.secondContainer}>
         <div>OCEAN model</div>
         <div>Traits</div>
         <button>Save</button>
