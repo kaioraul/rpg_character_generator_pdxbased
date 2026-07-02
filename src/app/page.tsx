@@ -17,15 +17,18 @@ export default function Home() {
             <div className={css.houseCoA}>House Coats of Arms</div>
             <div className={css.heirPortrait}></div>
           </div>
-          <div className={css.characterPortrait}></div>
+          <div className={css.character}>
+            <div className={css.characterPortrait}></div>
+            <input readOnly type="text" id="name" name="name" value="Name" />
+            <input readOnly type="text" id="title" name="title" value="Title" />
+            <input readOnly type="text" id="house" name="house" value="House" />
+          </div>
           <div className={css.portraitRight}>
             <div className={css.familyCoA}>Family Coats of Arms</div>
             <div className={css.spousePortrait}></div>
           </div>
         </div>
-        <input readOnly type="text" id="name" name="name" value="Name" />
-        <input readOnly type="text" id="title" name="title" value="Title" />
-        <input readOnly type="text" id="house" name="house" value="House" />
+
         <div className={css.skills}>
           <div className={css.diplomacy}>
             <Image
