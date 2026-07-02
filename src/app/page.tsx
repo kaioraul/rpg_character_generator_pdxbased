@@ -2,6 +2,11 @@ import Image from "next/image";
 
 import css from "./page.module.css";
 import diplomacyImage from "../images/diplomacy.png";
+import martialImage from "../images/martial.png";
+import stewardshipImage from "../images/stewardship.png";
+import intrigueImage from "../images/intrigue.png";
+import learningImage from "../images/learning.png";
+import prowessImage from "../images/prowess.png";
 
 export default function Home() {
   return (
@@ -31,10 +36,31 @@ export default function Home() {
             />
             Diplomacy
           </div>
-          <div className={css.martial}></div>
-          <div className={css.stewardship}></div>
-          <div className={css.intrigue}></div>
-          <div className={css.learning}></div>
+          <div className={css.martial}>
+            <Image src={martialImage} alt="Martial" width={25} height={25} />
+            Martial
+          </div>
+          <div className={css.stewardship}>
+            <Image
+              src={stewardshipImage}
+              alt="Stewardship"
+              width={25}
+              height={25}
+            />
+            Stewardship
+          </div>
+          <div className={css.intrigue}>
+            <Image src={intrigueImage} alt="Intrigue" width={25} height={25} />
+            Intrigue
+          </div>
+          <div className={css.learning}>
+            <Image src={learningImage} alt="Learning" width={25} height={25} />
+            Learning
+          </div>
+          <div className={css.prowess}>
+            <Image src={prowessImage} alt="Prowess" width={25} height={25} />
+            Prowess
+          </div>
         </div>
       </div>
       <div className={css.secondContainer}>
