@@ -28,6 +28,15 @@ export default function Home() {
             <div className={css.spousePortrait}></div>
           </div>
         </div>
+        <div className={css.mainContainerBottom}>
+          <div>Age</div>
+          <div>Culture</div>
+          <div>OCEAN model</div>
+          <div>Traits</div>
+          <button>Reset</button>
+          <button>Save</button>
+          <button>Export to PDF</button>
+        </div>
       </div>
       <div className={css.secondContainer}>
         <div className={css.skills}>
@@ -66,10 +75,6 @@ export default function Home() {
             Prowess
           </div>
         </div>
-        <div>OCEAN model</div>
-        <div>Traits</div>
-        <button>Save</button>
-        <button>Export to PDF</button>
       </div>
     </main>
   );
