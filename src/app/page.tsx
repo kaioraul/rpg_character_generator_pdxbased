@@ -7,6 +7,8 @@ import stewardshipImage from "../images/stewardship.png";
 import intrigueImage from "../images/intrigue.png";
 import learningImage from "../images/learning.png";
 import prowessImage from "../images/prowess.png";
+import Age from "../components/RecordManager/Age";
+import RecordManager from "../components/RecordManager/RecordManager";
 
 export default function Home() {
   return (
@@ -29,11 +31,17 @@ export default function Home() {
           </div>
         </div>
         <div className={css.mainContainerBottom}>
-          <div>Age</div>
-          <div>Culture</div>
+          <div>
+            Age
+            <Age value={0} />
+          </div>
+          <div>
+            Culture
+            <RecordManager value={0} />
+          </div>
           <div>OCEAN model</div>
           <div>Traits</div>
-          <button>Reset</button>
+          <button>Draw</button>
           <button>Save</button>
           <button>Export to PDF</button>
         </div>
