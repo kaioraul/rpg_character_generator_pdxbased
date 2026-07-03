@@ -1,11 +1,20 @@
 "client";
 
-export default function Dropdown() {
+interface DropdownProps {
+  records: {
+    id: string;
+    name: string;
+  }[];
+}
+
+export default function Dropdown({ records }: DropdownProps) {
   return (
     <select>
-      <option>Option 1</option>
-      <option>Option 2</option>
-      <option>Option 3</option>
+      {records.map((record) => (
+        <option key={record.id} value={record.name}>
+          {record.name}
+        </option>
+      ))}
     </select>
   );
 }

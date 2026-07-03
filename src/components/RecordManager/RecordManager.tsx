@@ -14,7 +14,7 @@ export default function RecordManager({ value }: RecordManagerProps) {
   return (
     <>
       {value}
-      <Dropdown />
+      <Dropdown records={[]} />
       <AddValue />
       <Draw />
     </>
