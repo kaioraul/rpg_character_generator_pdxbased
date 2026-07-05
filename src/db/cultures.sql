@@ -1,6 +1,6 @@
 CREATE TABLE IF NOT EXISTS culture (
   id TEXT PRIMARY KEY,
-  name TEXT NOT NULL,
+  "name" TEXT NOT NULL,
   cultureGroup TEXT NOT NULL
 );
 

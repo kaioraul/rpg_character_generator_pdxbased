@@ -1,7 +1,7 @@
 CREATE TABLE IF NOT EXISTS traits (
 id TEXT PRIMARY KEY,
 symbol TEXT NOT NULL,
-name TEXT NOT NULL,
+"name" TEXT NOT NULL,
 codename TEXT NOT NULL,
 category TEXT NOT NULL,
 cost INTEGER,
@@ -29,7 +29,7 @@ units TEXT,
 casualtyandmorale TEXT,
 terrain TEXT,
 combattactics TEXT
-); */
+);
 
 INSERT INTO traits 
 ('id', 'symbol', 'name', 'codename', 'category', 'cost', 'diplomacy', 'martial', 'stewardship', 'intrigue', 'learning', 'health', 'fertility', 'personalcombatskill', 'rationality', 'othermodifier', 'opinion', 'other', 'oppositetraits', 'requirements', 'birth', 'inherit', 'maydevelopinto', 'startdate', 'enddate', 'focus', 'units', 'casualtyandmorale', 'terrain', 'combattactics')
@@ -213,7 +213,7 @@ VALUES
 ('177','Winter Soldier','Winter Soldier','winter_soldier','Leadership',0,0,0,0,0,0,0,0,0,'',0,'+4 Winter Supply','','','','','','','','','','','+50% Winter Combat','',''),
 ('178','Master Seducer','Master Seducer','seducer','lifestyle',12,1,0,0,2,0,0,0,0,'+50 Attraction',0,'','Only obtainable by male characters.','Celibate Master seductress ','','','','','','','Seduction','','','',''),
 ('179','Master Seductress','Master Seductress','seductress','lifestyle',12,1,0,0,2,0,0,0,0,'+50 Attraction',0,'','Only obtainable by female characters.','Celibate Master seducer','','','','','','','Seduction','','','',''),
- '('180,'Administrator','Administrator','administrator','lifestyle',10,0,0,3,0,0,0,0,0,'',0,'+10% Movement Speed','','','','','','','','','Rulership','','','',''),
+('180','Administrator','Administrator','administrator','lifestyle',10,0,0,3,0,0,0,0,0,'',0,'+10% Movement Speed','','','','','','','','','Rulership','','','',''),
 ('181','Architect','Architect','architect','lifestyle',12,0,1,2,0,0,0,0,0,'+10 Same Trait',0,'+20% Siege -3% Great Work Build Cost -5% Great Work Build Time','','','','','','','','','Business','','','',''),
 ('182','Strategist','Strategist','strategist','lifestyle',12,0,2,1,0,0,0,0,0,'+10 Same Trait',0,'+20% Defence','','','','','','','','','War','','','',''),
 ('183','Socializer','Socializer','socializer','lifestyle',12,3,0,0,0,0,0,0,0,'+10 Attraction +10 Same Trait',0,'','','','','','','','','','Carousing Family','','','',''),
