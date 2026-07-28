@@ -1,8 +1,8 @@
 "client";
 
 import ButtonAdd from "../buttons/ButtonAdd";
-import Draw from "./Draw";
-import Dropdown from "./Dropdown";
+import Draw from "../buttons/ButtonDraw";
+import Dropdown from "../buttons/Dropdown";
 
 /* import css from "./RecordManager.module.css"; */
 

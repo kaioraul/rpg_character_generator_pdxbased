@@ -1,6 +1,6 @@
 "client";
 
-import Draw from "./Draw";
+import Draw from "../buttons/ButtonDraw";
 
 /* import css from "./Age.module.css"; */
 

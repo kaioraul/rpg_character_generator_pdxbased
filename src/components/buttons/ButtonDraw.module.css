@@ -1,0 +1,93 @@
+/* 1. Zewnętrzna, kamienna ramka (25x25 px) */
+.buttonDraw {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  background: #3a383e;
+  border: none;
+  border-radius: 1px;
+  box-shadow:
+    inset 1px 1px 0px rgba(255, 255, 255, 0.35),
+    inset -1px -1px 1px rgba(0, 0, 0, 0.9),
+    0 2px 5px rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+
+  /* Centrowanie ikony PNG wewnątrz */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Zabezpieczenie przed wystawaniem grafiki */
+}
+
+/* 2. Metalowa, srebrna ramka z fazowaniem (bez zmian) */
+.buttonDraw::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 21px;
+  height: 21px;
+  background: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    #88837a 40%,
+    #423f3a 60%,
+    #c4bfb5 100%
+  );
+  box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.8);
+  z-index: 1; /* Pod ikoną */
+}
+
+/* 3. NOWE: Głębokie NIEBIESKIE tło środka */
+.buttonDraw::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 17px;
+  height: 17px;
+
+  /* Głęboki, szafirowy niebieski w stylu RPG */
+  background: radial-gradient(circle, #2a5a8a 0%, #1a3c5e 65%, #0a1824 100%);
+
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.9);
+  border: 1px solid #0a1824;
+  box-sizing: border-box;
+  z-index: 2; /* Pod ikoną, nad ramką srebrną */
+}
+
+/* Stylizacja ikony PNG */
+.buttonDrawIcon {
+  position: relative;
+  z-index: 3; /* Nad tłem niebieskim */
+
+  /* Ustalenie maksymalnych wymiarów grafiki, aby pasowała do 17x17px środka */
+  max-width: 13px;
+  max-height: 13px;
+
+  /* Opcjonalnie: poprawa czytelności małej ikony */
+  image-rendering: pixelated; /* Dla ikon w stylu retro/pixel art */
+
+  /* Opcjonalnie: lekkie cienie pod ikoną PNG dla głębi */
+  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.5));
+}
+
+/* Efekt najechania kursorem (Hover) - rozjaśnia całą zawartość nad srebrną ramką */
+.buttonDraw:hover::after {
+  filter: brightness(1.2);
+}
+.buttonDraw:hover .buttonDrawIcon {
+  filter: brightness(1.2) drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.5));
+}
+
+/* Efekt wciśnięcia przycisku (Click / Active) */
+.buttonDraw:active {
+  transform: translateY(1px);
+}
+.buttonDraw:active::after,
+.buttonDraw:active .buttonDrawIcon {
+  filter: brightness(0.8);
+}
