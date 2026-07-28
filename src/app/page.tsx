@@ -9,6 +9,7 @@ import learningImage from "../images/learning.png";
 import prowessImage from "../images/prowess.png";
 import Age from "../components/RecordManager/Age";
 import RecordManager from "../components/RecordManager/RecordManager";
+import ButtonDraw from "@/components/buttons/ButtonDraw";
 
 export default function Home() {
   return (
@@ -41,7 +42,7 @@ export default function Home() {
           </div>
           <div>OCEAN model</div>
           <div>Traits</div>
-          <button>Draw</button>
+          <ButtonDraw />
           <button>Save</button>
           <button>Export to PDF</button>
         </div>
