@@ -1,0 +1,83 @@
+/* 1. Zewnętrzna, kamienna ramka (25x25 px) */
+.buttonAdd {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  background: #3a383e;
+  border: none;
+  border-radius: 1px;
+  box-shadow:
+    inset 1px 1px 0px rgba(255, 255, 255, 0.35),
+    inset -1px -1px 1px rgba(0, 0, 0, 0.9),
+    0 2px 5px rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+/* 2. Metalowa, srebrna ramka z fazowaniem (bez zmian) */
+.buttonAdd::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 21px;
+  height: 21px;
+  background: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    #88837a 40%,
+    #423f3a 60%,
+    #c4bfb5 100%
+  );
+  box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.8);
+}
+
+/* 3. Zielony środek + trójwymiarowy złoty "+" */
+.buttonAdd::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 17px;
+  height: 17px;
+
+  /* Zielone tło oraz profilowany złoty znak "+" */
+  background: 
+    /* Pionowe ramię plusa */
+    linear-gradient(
+      to right,
+      transparent 38%,
+      #dca237 39%,
+      #fef3a9 48%,
+      #785a17 57%,
+      transparent 58%
+    ),
+    /* Poziome ramię plusa */
+    linear-gradient(
+        to bottom,
+        transparent 38%,
+        #e5c158 39%,
+        #fef3a9 48%,
+        #9e7b23 57%,
+        transparent 58%
+      ),
+    /* Głębokie, zielone tło w stylu szmaragdu/sukna */
+    radial-gradient(circle, #225c34 0%, #133b1f 65%, #07190c 100%);
+
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.9);
+  border: 1px solid #07190c;
+  box-sizing: border-box;
+}
+
+/* Efekt najechania kursorem (Hover) */
+.buttonAdd:hover::after {
+  filter: brightness(1.2);
+}
+
+/* Efekt wciśnięcia przycisku (Click / Active) */
+.buttonAdd:active {
+  transform: translateY(1px);
+  filter: brightness(0.9);
+}

@@ -1,6 +1,6 @@
 "client";
 
-import AddValue from "./AddValue";
+import ButtonAdd from "../buttons/ButtonAdd";
 import Draw from "./Draw";
 import Dropdown from "./Dropdown";
 
@@ -15,7 +15,7 @@ export default function RecordManager({ value }: RecordManagerProps) {
     <>
       {value}
       <Dropdown records={[]} />
-      <AddValue />
+      <ButtonAdd />
       <Draw />
     </>
   );
