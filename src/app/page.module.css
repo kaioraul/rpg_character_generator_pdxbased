@@ -93,6 +93,11 @@
   border-radius: 100%;
 }
 
+.mainContainerBottomButtons {
+  display: flex;
+  flex-direction: row;
+}
+
 .secondContainer {
   display: flex;
   flex-direction: column;

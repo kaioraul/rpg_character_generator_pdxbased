@@ -7,9 +7,9 @@ import stewardshipImage from "../images/stewardship.png";
 import intrigueImage from "../images/intrigue.png";
 import learningImage from "../images/learning.png";
 import prowessImage from "../images/prowess.png";
-import Age from "../components/RecordManager/Age";
 import RecordManager from "../components/RecordManager/RecordManager";
 import ButtonDraw from "@/components/buttons/ButtonDraw";
+import Parchment from "@/components/parchment/Parchment";
 
 export default function Home() {
   return (
@@ -32,19 +32,25 @@ export default function Home() {
           </div>
         </div>
         <div className={css.mainContainerBottom}>
-          <div>
-            Age
-            <Age value={0} />
-          </div>
-          <div>
-            Culture
-            <RecordManager value={0} />
-          </div>
-          <div>OCEAN model</div>
-          <div>Traits</div>
-          <ButtonDraw />
-          <button>Save</button>
-          <button>Export to PDF</button>
+          <Parchment ParchmentVariant="01">
+            <RecordManager>Age</RecordManager>
+          </Parchment>
+          <Parchment ParchmentVariant="01">
+            <RecordManager>Culture</RecordManager>
+          </Parchment>
+          <Parchment ParchmentVariant="01">
+            <div>Traits</div>
+          </Parchment>
+          <Parchment ParchmentVariant="01">
+            <div>OCEAN model</div>
+          </Parchment>
+          <Parchment ParchmentVariant="01">
+            <div className={css.mainContainerBottomButtons}>
+              <ButtonDraw />
+              <button>Save</button>
+              <button>Export to PDF</button>
+            </div>
+          </Parchment>
         </div>
       </div>
       <div className={css.secondContainer}>
