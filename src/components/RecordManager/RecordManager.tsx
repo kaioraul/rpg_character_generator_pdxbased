@@ -1,22 +1,30 @@
 "client";
 
+import css from "./RecordManager.module.css";
 import ButtonAdd from "../buttons/ButtonAdd";
 import Draw from "../buttons/ButtonDraw";
 import Dropdown from "../buttons/Dropdown";
 
-/* import css from "./RecordManager.module.css"; */
-
 interface RecordManagerProps {
-  value: string | number | undefined;
+  children: React.ReactNode;
+  value?: string | number;
+  records?: [];
 }
 
-export default function RecordManager({ value }: RecordManagerProps) {
+export default function RecordManager({
+  children,
+  value,
+  records = [],
+}: RecordManagerProps) {
   return (
-    <>
+    <div className={css.recordManager}>
+      <text>{children}</text>
       {value}
-      <Dropdown records={[]} />
-      <ButtonAdd />
-      <Draw />
-    </>
+      <div className={css.recordManagerButtons}>
+        <Dropdown records={records} />
+        <ButtonAdd />
+        <Draw />
+      </div>
+    </div>
   );
 }

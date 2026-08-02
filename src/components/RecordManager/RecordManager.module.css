@@ -1,0 +1,9 @@
+.recordManager {
+  display: flex;
+  justify-content: space-between;
+}
+
+.recordManagerButtons {
+  display: flex;
+  flex-direction: row;
+}
