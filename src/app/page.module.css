@@ -93,6 +93,12 @@
   border-radius: 100%;
 }
 
+.mainContainerBottom {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
 .mainContainerBottomButtons {
   display: flex;
   flex-direction: row;

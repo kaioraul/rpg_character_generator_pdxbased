@@ -1,9 +1,6 @@
-"use client";
-
 import css from "./page.module.css";
 
 import Image from "next/image";
-import { useState } from "react";
 
 import RecordManager from "../components/RecordManager/RecordManager";
 import Dropdown from "../components/buttons/Dropdown";
@@ -17,11 +14,9 @@ import stewardshipImage from "../images/stewardship.png";
 import intrigueImage from "../images/intrigue.png";
 import learningImage from "../images/learning.png";
 import prowessImage from "../images/prowess.png";
+import Age from "@/components/Age/age";
 
 export default function Home() {
-  const [age, setAge] = useState(0);
-  const drawAge = () => Math.floor(Math.random() * 101);
-
   return (
     <main className={css.main}>
       <div className={css.mainContainer}>
@@ -43,9 +38,7 @@ export default function Home() {
         </div>
         <div className={css.mainContainerBottom}>
           <Parchment ParchmentVariant="01">
-            <RecordManager text="Age" value={age}>
-              <ButtonDraw onClick={() => setAge(drawAge())} />
-            </RecordManager>
+            <Age />
           </Parchment>
           <Parchment ParchmentVariant="01">
             <RecordManager text="Culture">

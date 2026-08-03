@@ -1,0 +1,43 @@
+.age {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.ageInput {
+  /* 1. Usunięcie domyślnego wyglądu przeglądarki */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  /* 2. Usunięcie tła, obramowania i promienia */
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  outline: none;
+
+  margin-left: 2px;
+  /* 4. Dziedziczenie czcionki z rodzica */
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+/* Usunięcie strzałek w <input type="number"> (Gopher/Chrome/Safari/Edge) */
+.ageInput::-webkit-outer-spin-button,
+.ageInput::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Usunięcie ikony czyszczenia w IE/Edge (jeśli dotyczy) */
+.ageInput::-ms-clear,
+.ageInput::-ms-reveal {
+  display: none;
+}
+
+.clean-input:focus-visible {
+  /* Twój własny styl skupienia zamiast domyślnego niebieskiego obramowania */
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
