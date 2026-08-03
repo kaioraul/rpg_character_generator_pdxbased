@@ -1,19 +1,16 @@
 import css from "./page.module.css";
-
-import Image from "next/image";
-
-import RecordManager from "../components/RecordManager/RecordManager";
-import Dropdown from "../components/buttons/Dropdown";
-import ButtonDraw from "@/components/buttons/ButtonDraw";
-import ButtonAdd from "@/components/buttons/ButtonAdd";
-import Parchment from "@/components/parchment/Parchment";
-
 import diplomacyImage from "../images/diplomacy.png";
 import martialImage from "../images/martial.png";
 import stewardshipImage from "../images/stewardship.png";
 import intrigueImage from "../images/intrigue.png";
 import learningImage from "../images/learning.png";
 import prowessImage from "../images/prowess.png";
+
+import Image from "next/image";
+
+import RecordManager from "../components/RecordManager/RecordManager";
+import ButtonDraw from "@/components/buttons/ButtonDraw";
+import Parchment from "@/components/parchment/Parchment";
 import Age from "@/components/Age/age";
 
 export default function Home() {
@@ -41,11 +38,7 @@ export default function Home() {
             <Age />
           </Parchment>
           <Parchment ParchmentVariant="01">
-            <RecordManager text="Culture">
-              <Dropdown records={[]} />
-              <ButtonAdd />
-              <ButtonDraw />
-            </RecordManager>
+            <RecordManager text="Culture" />
           </Parchment>
           <Parchment ParchmentVariant="01">
             <div>Traits</div>
