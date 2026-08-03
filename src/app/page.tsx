@@ -1,6 +1,7 @@
 "use client";
 
 import css from "./page.module.css";
+
 import Image from "next/image";
 import { useState } from "react";
 
@@ -19,7 +20,6 @@ import prowessImage from "../images/prowess.png";
 
 export default function Home() {
   const [age, setAge] = useState(0);
-
   const drawAge = () => Math.floor(Math.random() * 101);
 
   return (

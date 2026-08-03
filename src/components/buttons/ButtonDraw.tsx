@@ -1,5 +1,3 @@
-"client";
-
 import css from "./ButtonDraw.module.css";
 import Image from "next/image";
 import dieImage from "../../images/die.png";

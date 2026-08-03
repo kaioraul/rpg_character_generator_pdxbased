@@ -1,5 +1,3 @@
-"client";
-
 import css from "./ButtonAdd.module.css";
 
 export default function ButtonAdd() {

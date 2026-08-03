@@ -1,5 +1,3 @@
-"client";
-
 import css from "./RecordManager.module.css";
 
 interface RecordManagerProps {

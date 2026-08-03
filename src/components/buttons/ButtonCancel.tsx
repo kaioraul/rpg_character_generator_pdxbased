@@ -1,5 +1,3 @@
-"client";
-
 import css from "./ButtonCancel.module.css";
 
 export default function ButtonCancel() {
