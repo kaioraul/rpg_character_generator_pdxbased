@@ -1,11 +1,15 @@
-import Image from "next/image";
+"use client";
 
 import css from "./page.module.css";
+import Image from "next/image";
+import { useState } from "react";
+
 import RecordManager from "../components/RecordManager/RecordManager";
 import Dropdown from "../components/buttons/Dropdown";
 import ButtonDraw from "@/components/buttons/ButtonDraw";
 import ButtonAdd from "@/components/buttons/ButtonAdd";
 import Parchment from "@/components/parchment/Parchment";
+
 import diplomacyImage from "../images/diplomacy.png";
 import martialImage from "../images/martial.png";
 import stewardshipImage from "../images/stewardship.png";
@@ -14,6 +18,10 @@ import learningImage from "../images/learning.png";
 import prowessImage from "../images/prowess.png";
 
 export default function Home() {
+  const [age, setAge] = useState(0);
+
+  const drawAge = () => Math.floor(Math.random() * 101);
+
   return (
     <main className={css.main}>
       <div className={css.mainContainer}>
@@ -35,8 +43,8 @@ export default function Home() {
         </div>
         <div className={css.mainContainerBottom}>
           <Parchment ParchmentVariant="01">
-            <RecordManager text="Age">
-              <ButtonDraw />
+            <RecordManager text="Age" value={age}>
+              <ButtonDraw onClick={() => setAge(drawAge())} />
             </RecordManager>
           </Parchment>
           <Parchment ParchmentVariant="01">
